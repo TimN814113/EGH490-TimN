@@ -1,0 +1,31 @@
+config,cf_model,av_pct,n_trials,spacing_mse_mean,spacing_mse_std,collision_mean,jerk_mean,jerk_std,ttc_mean,ttc_std
+Expert-Calibrated,DDPG-Approx,0,20,451.5008,48.4696,0.0,24.762726,0.994701,0.0574,0.0194
+Expert-Calibrated,DDPG-Approx,25,20,346.737,55.2111,0.0,22.594114,1.214444,0.0381,0.0204
+Expert-Calibrated,DDPG-Approx,50,20,251.0564,46.0308,0.0,18.849026,1.162931,0.0211,0.0109
+Expert-Calibrated,IDM,0,20,1731.8608,160.3715,0.0,0.686363,0.05098,0.0325,0.0103
+Expert-Calibrated,IDM,25,20,1450.8598,191.3234,0.0,0.561735,0.051499,0.0182,0.0067
+Expert-Calibrated,IDM,50,20,1238.7488,254.6678,0.0,0.37187,0.053033,0.0076,0.0061
+LLM-Generated (Claude claude-sonnet-4-6),DDPG-Approx,0,20,484.9528,97.1748,0.25,29.988621,3.956012,0.1178,0.1511
+LLM-Generated (Claude claude-sonnet-4-6),DDPG-Approx,25,20,392.2148,46.5354,0.0,26.497375,1.930389,0.0676,0.0316
+LLM-Generated (Claude claude-sonnet-4-6),DDPG-Approx,50,20,233.9431,98.9518,0.15,18.967791,3.898226,0.0702,0.1496
+LLM-Generated (Claude claude-sonnet-4-6),IDM,0,20,1410.2269,285.9404,0.0,0.656447,0.137261,0.0278,0.0086
+LLM-Generated (Claude claude-sonnet-4-6),IDM,25,20,1028.4999,240.1927,0.0,0.454477,0.095992,0.0106,0.0055
+LLM-Generated (Claude claude-sonnet-4-6),IDM,50,20,941.1161,202.3338,0.0,0.310745,0.067617,0.0073,0.0051
+LLM-Generated-FixNormalBcomf (ablation),DDPG-Approx,0,20,534.2812,151.412,0.85,30.415924,1.360628,0.2438,0.3008
+LLM-Generated-FixNormalBcomf (ablation),DDPG-Approx,25,20,350.2435,83.9567,0.1,25.269297,3.33513,0.0949,0.1617
+LLM-Generated-FixNormalBcomf (ablation),DDPG-Approx,50,20,203.1764,68.4579,0.0,17.609946,5.241348,0.0267,0.0184
+LLM-Generated-FixNormalBcomf (ablation),IDM,0,20,1449.0649,158.3289,0.0,0.655078,0.050374,0.0248,0.0114
+LLM-Generated-FixNormalBcomf (ablation),IDM,25,20,1142.142,224.2085,0.0,0.470746,0.09347,0.0124,0.0067
+LLM-Generated-FixNormalBcomf (ablation),IDM,50,20,896.5961,250.8366,0.0,0.301795,0.073837,0.0045,0.0038
+Ollama-Casual (llama3.1),DDPG-Approx,0,20,168.4134,79.3221,0.0,12.284134,3.777093,0.0419,0.0257
+Ollama-Casual (llama3.1),DDPG-Approx,25,20,227.5958,53.7962,0.35,19.518226,1.805735,0.0889,0.0782
+Ollama-Casual (llama3.1),DDPG-Approx,50,20,198.1987,63.847,1.0,17.385819,3.704532,0.1596,0.1608
+Ollama-Casual (llama3.1),IDM,0,20,2451.3058,248.3315,0.0,0.273665,0.074203,0.0027,0.0023
+Ollama-Casual (llama3.1),IDM,25,20,1917.8782,191.3952,0.0,0.483202,0.055838,0.0077,0.0045
+Ollama-Casual (llama3.1),IDM,50,20,1642.0766,519.5621,0.0,0.34583,0.118782,0.0028,0.0031
+Ollama-Casual-FixNormalBcomf (ablation),DDPG-Approx,0,20,138.1824,59.225,0.2,11.811273,3.42079,0.0463,0.0554
+Ollama-Casual-FixNormalBcomf (ablation),DDPG-Approx,25,20,213.0752,54.2263,0.5,18.766751,1.822773,0.127,0.1492
+Ollama-Casual-FixNormalBcomf (ablation),DDPG-Approx,50,20,220.7642,61.6298,0.75,19.521078,1.820775,0.1905,0.1236
+Ollama-Casual-FixNormalBcomf (ablation),IDM,0,20,2452.9285,340.7396,0.0,0.254616,0.078579,0.0038,0.0026
+Ollama-Casual-FixNormalBcomf (ablation),IDM,25,20,1861.5633,214.3127,0.0,0.474592,0.040372,0.0078,0.0043
+Ollama-Casual-FixNormalBcomf (ablation),IDM,50,20,1741.2764,546.0456,0.0,0.361382,0.112124,0.004,0.0032

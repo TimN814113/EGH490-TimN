@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# Secrets — never commit
+# ---------------------------------------------------------------------------
+.env
+
+# ---------------------------------------------------------------------------
+# Omitted base files — direct restructurings of the original MATLAB
+# (GenerateurTraficV47_FollowNet.m) codebase, withheld pending supervisor
+# approval. See README.md "Omitted base files" for the full explanation.
+# These exist locally and are used by the app/scripts at runtime; they are
+# just not tracked by or pushed through git for now.
+# ---------------------------------------------------------------------------
+sim/physics.py
+sim/fleet.py
+sim/metrics.py
+sim/runner.py
+sim/telemetry.py
+sim/configs_base.py
+sim_ui_base.py
+run_experiment.py
+
+# ---------------------------------------------------------------------------
+# Environment / build artifacts
+# ---------------------------------------------------------------------------
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.claude/
+
+# ---------------------------------------------------------------------------
+# Data — raw per-trial results are large (multi-GB) and not meaningful
+# without the full run_dir context; results_summary/ (committed) holds the
+# curated aggregate CSVs/JSONs that actually back every finding.
+# ---------------------------------------------------------------------------
+results/
+
+# ---------------------------------------------------------------------------
+# Generated deliverables / scratch — regenerate via their build_*.py scripts
+# rather than tracking the binary output
+# ---------------------------------------------------------------------------
+*.pptx
+~$*.pptx
+EGH490_Results_Data.zip
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

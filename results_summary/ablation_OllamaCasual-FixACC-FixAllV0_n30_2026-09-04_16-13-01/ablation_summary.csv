@@ -1,0 +1,13 @@
+config,av_pct,n_trials,collision_mean,collision_max,collision_nonzero_trials,jerk_mean,ttc_mean,spacing_mse_mean
+Expert-Calibrated,0,30,0.0,0,0,24.347154,0.0619,442.6236
+Expert-Calibrated,25,30,0.0,0,0,22.396224,0.0397,349.8666
+Expert-Calibrated,50,30,0.0,0,0,17.256974,0.0177,201.5872
+Ollama-Casual (llama3.1),0,30,0.0,0,0,11.105318,0.0309,141.8038
+Ollama-Casual (llama3.1),25,30,0.5667,6,6,18.977053,0.1292,236.8734
+Ollama-Casual (llama3.1),50,30,0.2333,2,5,17.51807,0.0785,170.5206
+Ollama-Casual-FixACC (ablation),0,30,0.0,0,0,11.04941,0.0328,139.5056
+Ollama-Casual-FixACC (ablation),25,30,0.0333,1,1,14.350639,0.0344,163.0381
+Ollama-Casual-FixACC (ablation),50,30,0.0667,2,1,13.503734,0.0344,130.1143
+Ollama-Casual-FixAllV0 (ablation),0,30,0.8,8,5,16.796517,0.1663,310.8838
+Ollama-Casual-FixAllV0 (ablation),25,30,0.7667,5,7,20.851657,0.1535,299.0605
+Ollama-Casual-FixAllV0 (ablation),50,30,0.1667,4,2,18.669107,0.068,176.7487
