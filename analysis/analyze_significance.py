@@ -30,16 +30,19 @@ Method:
     threshold would be expected to produce false positives by chance alone.
 
 Usage:
-    python analyze_significance.py
-    python analyze_significance.py --baseline "Expert-Calibrated" --alpha 0.05
+    python analysis/analyze_significance.py
+    python analysis/analyze_significance.py --baseline "Expert-Calibrated" --alpha 0.05
 """
 
 import argparse
+import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from scipy import stats
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # repo root, for sim/chatsumo imports
 
 from sim.configs import ALL_CONFIGS
 

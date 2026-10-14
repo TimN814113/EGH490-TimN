@@ -18,11 +18,14 @@ so directional patterns (e.g. "casual prompting inflates SPORTY.a_max") are
 visible directly in the table rather than needing per-config manual inspection.
 
 Usage:
-    python build_signed_deviation_tables.py
+    python analysis/build_signed_deviation_tables.py
 """
 
 import csv
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # repo root, for sim/chatsumo imports
 
 from sim.configs import EXPERT, ALL_CONFIGS
 

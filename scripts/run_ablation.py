@@ -16,17 +16,20 @@ the collisions are), no LSTM/IDM, no density/speed/interaction sweeps — this
 is a targeted diagnostic, not a full replication.
 
 Usage:
-    python run_ablation.py
-    python run_ablation.py --trials 30 --t_sim 300
+    python scripts/run_ablation.py
+    python scripts/run_ablation.py --trials 30 --t_sim 300
 """
 
 import argparse
 import csv
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
 
 import numpy as np
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # repo root, for sim/chatsumo imports
 
 from sim.configs import EXPERT, OLLAMA_CASUAL, OLLAMA_CASUAL_FIX_ACC, OLLAMA_CASUAL_FIX_ALL_V0
 from sim.runner import run_simulation

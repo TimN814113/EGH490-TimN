@@ -57,21 +57,24 @@ preset is then held fixed across all trials/conditions, exactly like EXPERT
 and LLM already are. Adding it makes every group ~50% larger (3 configs
 instead of 2), so budget time accordingly.
 
-Usage:
-    python run_report_replication.py
-    python run_report_replication.py --trials 8 --t_sim 300
-    python run_report_replication.py --trials 8 --t_sim 300 --include-ollama
+Usage (from the repository root):
+    python scripts/run_report_replication.py
+    python scripts/run_report_replication.py --trials 8 --t_sim 300
+    python scripts/run_report_replication.py --trials 8 --t_sim 300 --include-ollama
 """
 
 import argparse
 import csv
 import json
 import os
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
 
 import numpy as np
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # repo root, for sim/chatsumo imports
 
 from sim.configs import EXPERT
 # from sim.configs import LLM  # Claude-sonnet-4-6 config — commented out, testing Ollama only for now

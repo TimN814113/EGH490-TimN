@@ -16,8 +16,8 @@ run_report_replication.py invocations, run with bounded concurrency (not all
 single-threaded numpy-heavy process.
 
 Usage:
-    python run_battery.py
-    python run_battery.py --max-workers 8 --trials 10 --t_sim 180
+    python scripts/run_battery.py
+    python scripts/run_battery.py --max-workers 8 --trials 10 --t_sim 180
 """
 
 import argparse
@@ -57,7 +57,7 @@ FLAG = {
 
 def run_one(source: str, variant: str, noise: bool, trials: int, t_sim: float, log_dir: Path) -> str:
     label = f"{source}_{variant}_{'noise' if noise else 'base'}"
-    cmd = [PYTHON, "run_report_replication.py",
+    cmd = [PYTHON, str(Path(__file__).resolve().parent / "run_report_replication.py"),
            "--trials", str(trials), "--t_sim", str(t_sim), "--skip-interaction",
            FLAG[source], variant]
     if noise:

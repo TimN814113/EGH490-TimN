@@ -17,12 +17,13 @@ n=20/scenario. Then re-runs the Welch's t-test + BH-FDR significance check
 import json
 import time
 import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, ".")
-from analyze_significance import welch_test, bh_fdr
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # repo root, for sim/chatsumo/analysis imports
+from analysis.analyze_significance import welch_test, bh_fdr
 from chatsumo.llm_backend import elicit_idm_params_claude
 
 PROMPTS = {

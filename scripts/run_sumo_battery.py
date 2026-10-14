@@ -27,15 +27,18 @@ resolved, and any comparison against Python-engine numbers should account
 for it rather than treating the two as perfectly equivalent physics.
 
 Usage:
-    python run_sumo_battery.py
-    python run_sumo_battery.py --trials 8 --t_sim 90
+    python scripts/run_sumo_battery.py
+    python scripts/run_sumo_battery.py --trials 8 --t_sim 90
 """
 
 import argparse
 import csv
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # repo root, for sim/chatsumo imports
 
 from chatsumo.sumo_runner import run_sumo_full_metrics
 from sim.configs import EXPERT, LLM, CLAUDE_CASUAL_RUN2, SUMO_DEFAULT_IDM

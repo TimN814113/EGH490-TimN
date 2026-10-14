@@ -36,9 +36,9 @@ other unresolved runs of the same true (unknown) setting, so treat any
 "unresolved" warning as blocking for headline numbers until backfilled.
 
 Usage:
-    python aggregate_results.py
-    python aggregate_results.py --backfill-map results/variability_backfill.json
-    python aggregate_results.py --pattern "results/report_replication_*/report_replication_summary.csv"
+    python analysis/aggregate_results.py
+    python analysis/aggregate_results.py --backfill-map results/variability_backfill.json
+    python analysis/aggregate_results.py --pattern "results/report_replication_*/report_replication_summary.csv"
 """
 
 import argparse

@@ -27,17 +27,20 @@ diagnostics are cheap, ~2.4s/trial):
     threshold-branching policy, not just as a smooth cap like IDM).
 
 Usage:
-    python run_ddpg_profile_ablation.py
-    python run_ddpg_profile_ablation.py --trials 30 --t_sim 300
+    python scripts/run_ddpg_profile_ablation.py
+    python scripts/run_ddpg_profile_ablation.py --trials 30 --t_sim 300
 """
 
 import argparse
 import csv
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
 
 import numpy as np
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # repo root, for sim/chatsumo imports
 
 from sim.configs import (
     EXPERT, LLM, CLAUDE_CASUAL_RUN2,
