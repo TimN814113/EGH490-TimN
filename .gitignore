@@ -29,16 +29,20 @@ node_modules/
 .claude/
 
 # ---------------------------------------------------------------------------
-# Data — raw per-trial results are large (multi-GB) and not meaningful
-# without the full run_dir context; results_summary/ (committed) holds the
-# curated aggregate CSVs/JSONs that actually back every finding.
+# Model output / results data — not tracked in git. Raw per-trial results
+# (results/) and the curated aggregate CSVs/JSONs (results_summary/) are
+# both reproducible by re-running the test scripts above; this repo tracks
+# the testing code, not its output.
 # ---------------------------------------------------------------------------
 results/
+results_summary/
 
 # ---------------------------------------------------------------------------
-# Generated deliverables / scratch — regenerate via their build_*.py scripts
-# rather than tracking the binary output
+# Generated deliverables / housekeeping scripts — not related to testing
+# the models, regenerate/run locally as needed
 # ---------------------------------------------------------------------------
+build_summary_pptx.py
+rename_result_folders.py
 *.pptx
 ~$*.pptx
 EGH490_Results_Data.zip

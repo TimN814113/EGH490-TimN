@@ -1,5 +1,0 @@
-config,n_trials,t_sim,n_veh,av_pct,spacing_mse_mean,spacing_mse_std,collision_mean,jerk_mean,jerk_std,ttc_mean,ttc_std
-Expert-Calibrated,8,90.0,25,25,790.6897,167.0142,0.0,1.390932,0.975813,0.0,0.0
-LLM-Generated,8,90.0,25,25,804.8503,195.6906,0.0,1.644525,0.962137,0.0,0.0
-Claude-Casual-Run2,8,90.0,25,25,978.1629,174.5311,0.0,0.839237,0.472243,0.0,0.0
-SUMO-Default-IDM,8,90.0,25,25,1161.3972,181.7882,0.0,0.55046,0.45986,0.0,0.0
