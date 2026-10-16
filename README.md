@@ -1,27 +1,11 @@
 # EGH490-1 — LLM-Based Decision-Making for an Automated Vehicle
 
-**Tim Nguyen (N11505222) — Queensland University of Technology**
-**Supervisor: Dr Sebastien Glaser**
-
-Can LLM tools (Claude, Ollama/Llama 3.1) be trusted to configure IDM
-car-following parameters for AV traffic simulation? This repository re-tests
-the project's original Week 12/13 report at far higher statistical power —
-up to 88× the original sample size — across three car-following models
-(IDM, LSTM-Approx, DDPG-Approx) with a real SUMO cross-validation, and finds
-that the report's own headline safety claim does not replicate.
-
-The full write-up of every finding, exact test conditions, and statistical
-evidence is "The Elicitation Ledger" (linked separately — ask Tim if you
-need the URL). This repository is the code and data behind it.
-
 ## ⚠️ Omitted base files
 
 **This repository does not include the base simulation engine.** Several
-files are a direct Python restructuring of the project's original MATLAB
-codebase (`GenerateurTraficV47_FollowNet.m`, supplied by Dr Glaser), and are
-withheld from git pending his approval to publish:
+files are a direct Python restructuring of the project, and are
+withheld from git pending approval to publish:
 
-| Omitted file | What it is |
 |---|---|
 | `sim/physics.py` | IDM / LSTM-Approx / DDPG-Approx car-following physics — translated from the `.m` file's physics/decision functions |
 | `sim/fleet.py` | Fleet initialisation and per-step physics update |
@@ -32,11 +16,6 @@ withheld from git pending his approval to publish:
 | `sim_ui_base.py` | The Streamlit Simulation tab — a direct GUI recreation of the MATLAB app (road view, RSS grid, live graphs) |
 | `run_experiment.py` | Headless batch runner — Python equivalent of `FollowNet_Experiment('batch')` |
 
-These files exist locally (in `sim/` and at the repo root) and are used at
-runtime; they are simply not tracked by or pushed through this git
-repository. `run_experiment.py` is additionally redundant now — everything
-it does is a strict subset of `scripts/run_report_replication.py` +
-`scripts/run_battery.py` (its own replacement for "run many at once").
 
 **A fresh clone of this repository will not run end-to-end** —
 `sim/configs.py` and `sim_ui_base.py` imports will fail, and any script that
